@@ -1,0 +1,19 @@
+<h1>Formulario de Personas</h1>
+<div>
+  <div class="form-group">
+    <label for="names">Nombre</label>
+    <input [(ngModel)]="persona.names" type="text" class="form-control" id="names" placeholder="Ingrese Nombre">
+    <label for="lastnames">Apellido</label>
+    <input [(ngModel)]="persona.lastnames" type="text" class="form-control" id="lastnames" placeholder="Ingrese Apellido">
+    <label for="telephone">Telefono</label>
+    <input [(ngModel)]="persona.telephone" type="text" class="form-control" id="telephone" placeholder="Ingrese Telefono">
+    <label for="email">Correo</label>
+    <input [(ngModel)]="persona.email" type="text" class="form-control" id="email" placeholder="Ingrese Correo">
+    <label for="address">Dirección</label>
+    <input [(ngModel)]="persona.address" type="text" class="form-control" id="address" placeholder="Ingrese Direccion">
+
+  </div>
+
+
+  <button (click)="savePersona()" type="submit" class="btn btn-primary">Guardar</button>
+</div>

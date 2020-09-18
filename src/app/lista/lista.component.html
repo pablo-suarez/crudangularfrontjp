@@ -1,0 +1,29 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let persona of personas">
+      <th scope="row">{{persona.id}}</th>
+      <td>{{persona.names}}</td>
+      <td>{{persona.lastnames}}</td>
+      <td>{{persona.telephone}}</td>
+      <td>{{persona.email}}</td>
+      <td>{{persona.address}}</td>
+      <td>
+        <a class="btn btn-primary btn-sm" routerLink="/formulario/{{persona.id}}">Ver o Editar</a>
+        <a class="btn btn-danger" (click)="delete(persona.id)">Eliminar</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
